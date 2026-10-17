@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Mujtaba | Personal Website</title>
+<meta name="description" content="Aap ka naam – personal website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #eef1ec;
+    --ink: #1d2a2a;
+    --muted: #55645f;
+    --accent: #0f5c5a;
+    --mark: #c8962b;
+    --line: #cfd6cf;
+    --display: "Fraunces", Georgia, "Times New Roman", serif;
+    --body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #121a19;
+      --ink: #e8eee9;
+      --muted: #9fb0a9;
+      --accent: #5fc4bd;
+      --mark: #e0b04f;
+      --line: #2a3835;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+  a { color: var(--accent); }
+  a:focus-visible { outline: 3px solid var(--mark); outline-offset: 3px; }
+
+  .layout {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 4rem;
+  }
+  header.side {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    padding: 4rem 0;
+  }
+  .initials {
+    width: 96px; height: 96px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--paper);
+    display: grid; place-items: center;
+    font-family: var(--display);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  h1 {
+    font-family: var(--display);
+    font-size: 2.6rem;
+    line-height: 1.1;
+    margin: 0 0 .5rem;
+  }
+  .role { color: var(--muted); margin: 0 0 1.5rem; }
+  nav a {
+    display: block;
+    padding: .35rem 0;
+    color: var(--ink);
+    text-decoration: none;
+    border-left: 3px solid var(--line);
+    padding-left: .9rem;
+  }
+  nav a:hover { border-left-color: var(--mark); }
+
+  main { padding: 4rem 0; }
+  section { padding-bottom: 3.5rem; max-width: 62ch; }
+  h2 {
+    font-family: var(--display);
+    font-size: 1.7rem;
+    margin: 0 0 1rem;
+  }
+  .facts { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+  .facts li {
+    display: flex; gap: 1rem;
+    padding: .7rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .facts span:first-child { width: 8rem; color: var(--muted); flex-shrink: 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; list-style: none; margin: 0; }
+  .tags li { border: 1px solid var(--accent); border-radius: 999px; padding: .2rem .9rem; }
+  footer { color: var(--muted); font-size: .9rem; padding: 2rem 0 3rem; }
+
+  @media (max-width: 800px) {
+    .layout { grid-template-columns: 1fr; gap: 0; }
+    header.side { position: static; padding: 2.5rem 0 1rem; }
+    main { padding-top: 1.5rem; }
+    .facts li { flex-direction: column; gap: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <header class="side">
+    <div class="initials" aria-hidden="true">AN</div>
+    <!-- 1) Apna naam likhein -->
+    <h1>Muhammad Mujtaba</h1>
+    <!-- 2) Apna kaam / pehchan likhein -->
+    <p class="role">Student / Developer / Designer</p>
+    <nav aria-label="Sections">
+      <a href="#about">About me</a>
+      <a href="#details">Personal details</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a herf="#social media">Facebook</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About me</h2>
+      <!-- 3) Apne baare mein chand lines -->
+      <p>Hello, I am Muhammad Mujtaba, a passionate student from Peshawar. I secured an A Grade in my Matric with 881 marks. Presently, I am studying FCS at Government College Peshawar. I aspire to become a professional Software Engineer and have a keen interest in Web Development, Digital Marketing, and Freelancing..</p>
+    </section>
+
+    <section id="details">
+      <h2>Personal details</h2>
+      <!-- 4) Sirf wohi information rakhein jo aap sab ko dikhana chahte hain -->
+      <ul class="facts">
+        <li><span>Full name</span><span>Muhammad Mujtaba </span></li>
+        <li><span>City</span><span>Peshawar,Pakistan</span></li>
+        <li><span>Education</span><span>matric with A Grade</span></li>
+        <li><span>Languages</span><span>Pashto,Urdu, English</span></li>
+        <li><span>Hobbies</span><span>Software Engineer</span></li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="tags">
+        <li>Basic Computer</li>
+        <li>Tiktok UK Account creating</li>
+        <li>MS Office Work</li>
+      
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <!-- 5) Apni email / links likhein -->
+      <p>Can you chat Me: <a href="mailto:mujtabakhaliloffical@gmail.com">mujtabakhaliloffical@gmail.com</a></p>
+      <p><a href="https://www.linkedin.com/" rel="noopener">LinkedIn</a> &nbsp; <a href="https://github.com/" rel="noopener">GitHub</a></p>
+    </section>
+
+    <footer>&copy; 2026 Mujtaba Khalili</footer>
+  </main>
+
+</div>
+</body>
+</html>
